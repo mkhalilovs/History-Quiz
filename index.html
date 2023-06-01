@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" href="#">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>History Quiz for Beginners</title>
@@ -25,13 +26,13 @@
         <button class="start-btn" id="start" >Start</button>
       </div>
       <div class="quest-div hidden">
-        <h3>Question 1</h3>
+        <h3 class="quest-header"></h3>
         <img
           src="https://images.pexels.com/photos/3795023/pexels-photo-3795023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Question Image"
           class="question-image"
         />
-        <p>
+        <p class="quest-p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
           soluta! Error fuga laborum optio earum! Consequatur possimus quae
           eaque. Magni, quo blanditiis ducimus dolores illo repudiandae vel
@@ -40,23 +41,24 @@
         <div class="choices">
              
             <input type="radio" id="a" name="choice" value="A">
-            <label for="a">A</label><br>
+            <label for="a" id="label-a">A</label><br>
 
             <input type="radio" id="b" name="choice" value="B">
-            <label for="b">B</label><br>
+            <label for="b" id="label-b">B</label><br>
 
             <input type="radio" id="c" name="choice" value="C">
-            <label for="c">C</label>
+            <label for="c" id="label-c">C</label>
 
             <input type="radio" id="d" name="choice" value="D">
-            <label for="d">D</label>
+            <label for="d" id="label-d">D</label>
           
         </div>
         <div class="question-buttons">
-          <button>Previous</button>
-          <button>Next</button>
+          <button class="previous">Previous</button>
+          <button class="next">Next</button>
+          <button class="again hidden">Start Again</button>
         </div>
 
-        <script src="main.js"></script>
+        <script type="module" src="main.js"></script>
     </body>
 </html>

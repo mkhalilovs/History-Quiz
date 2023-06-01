@@ -65,6 +65,7 @@ button {
 
 .choices {
   display: flex;
+  padding: 2px;
 }
 
 .choices input[type="radio"] {
@@ -75,10 +76,12 @@ button {
 
 .choices label {
   background-color: #917756;
-  padding: 7px 20px;
   border-radius: 8px;
   color: black;
   margin: 10px;
+  height: 28px;
+  font-size: 7px;
+  padding: 14px;
 }
 .choices input[type="radio"]:checked + label {
   background-color: #2a1401;
@@ -86,6 +89,15 @@ button {
   color: #a97100;
 }
 
-.choices input[type="radio"]:focus + label {
-  border: 2px solid #866810;
+@media screen and (min-width: 600px) {
+  .question-image {
+    width: 400px;
+  }
+  .choices label {
+    background-color: #917756;
+    padding: 7px 20px;
+    border-radius: 8px;
+    color: black;
+    margin: 10px;
+  }
 }
