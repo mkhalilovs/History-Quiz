@@ -88,16 +88,4 @@ button {
   border-color: #866810;
   color: #a97100;
 }
-
-@media screen and (min-width: 600px) {
-  .question-image {
-    width: 400px;
-  }
-  .choices label {
-    background-color: #917756;
-    padding: 7px 20px;
-    border-radius: 8px;
-    color: black;
-    margin: 10px;
-  }
-}
+ 
