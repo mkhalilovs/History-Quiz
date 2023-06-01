@@ -56,7 +56,7 @@ function questFiller() {
   labelD.textContent = question.answer4;
 }
 
-document.getElementById("start").addEventListener("click", function () {
+document.getElementById("start").addEventListener("click touchstart", function () {
   question = questionsArray[0].questions[0];
   i = 0;
   correctAnswers = 0;
@@ -76,7 +76,7 @@ document.getElementById("start").addEventListener("click", function () {
   questionH.textContent = `Question ${i + 1}`;
 });
 
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click touchstart", function () {
   radioButtons.forEach((radioButton) => (radioButton.disabled = false));
   // Next button will be pressable when index is lower than the array's length - 1
   if (i < questionsArray[0].questions.length - 1) {
@@ -124,7 +124,7 @@ nextBtn.addEventListener("click", function () {
   }
 });
 
-previousBtn.addEventListener("click", function () {
+previousBtn.addEventListener("click touchstart", function () {
   // Previous button will be pressable when index is greater than 0
   if (i > 0) {
     i--;
@@ -137,7 +137,7 @@ previousBtn.addEventListener("click", function () {
   }
 });
 
-againBtn.addEventListener("click", function () {
+againBtn.addEventListener("click touchstart", function () {
   introDiv.classList.remove("hidden");
   questionDiv.classList.add("hidden");
 });
