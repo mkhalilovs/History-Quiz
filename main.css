@@ -80,7 +80,7 @@ button {
   color: black;
   margin: 10px;
   height: 28px;
-  font-size: 7px;
+  font-size: 16px;
   padding: 14px;
 }
 .choices input[type="radio"]:checked + label {
