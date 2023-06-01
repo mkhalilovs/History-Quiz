@@ -118,8 +118,10 @@ nextBtn.addEventListener("click", function () {
     labelC.style.backgroundColor = "#917756";
     labelD.style.backgroundColor = "#917756";
     uncheck();
+    console.log(
+      "This is the last question. There are no next questions anymore"
+    );
   }
-  console.log("This is the last question. There are no next questions anymore");
 });
 
 previousBtn.addEventListener("click", function () {
