@@ -1,6 +1,6 @@
 "use strict";
 
-import data from "./data.json";
+import data from "./data.json" assert { type: "json" };
 
 // New Array for storing the JSON
 let questionsArray = [];
