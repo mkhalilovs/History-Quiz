@@ -100,4 +100,7 @@ button {
     color: black;
     margin: 10px;
   }
+  .hidden {
+  display: none;
+}
 }
