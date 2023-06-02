@@ -141,6 +141,7 @@ let selectB = document.getElementById("b").checked;
 let selectC = document.getElementById("c").checked;
 let selectD = document.getElementById("d").checked;
 
+// Storing html elements in the variables
 let questionP = document.querySelector(".quest-p");
 let questionH = document.querySelector(".quest-header");
 let questionImage = document.querySelector(".question-image");
@@ -148,6 +149,7 @@ let againBtn = document.querySelector(".again");
 let nextBtn = document.querySelector(".next");
 let previousBtn = document.querySelector(".previous");
 
+// Storing labels in the variables
 let labelA = document.getElementById("label-a");
 let labelB = document.getElementById("label-b");
 let labelC = document.getElementById("label-c");
@@ -191,7 +193,7 @@ document.getElementById("start").addEventListener("click", function () {
   questionH.textContent = `Question ${i + 1}`;
 });
 
-document.getElementById("next").addEventListener("click", function () {
+nextBtn.addEventListener("click", function () {
   radioButtons.forEach((radioButton) => (radioButton.disabled = false));
   // Next button will be pressable when index is lower than the array's length - 1
   if (i < questionsArray[0].questions.length - 1) {
@@ -239,7 +241,7 @@ document.getElementById("next").addEventListener("click", function () {
   }
 });
 
-document.getElementById("previous").addEventListener("click", function () {
+previousBtn.addEventListener("click", function () {
   // Previous button will be pressable when index is greater than 0
   if (i > 0) {
     i--;
@@ -252,15 +254,17 @@ document.getElementById("previous").addEventListener("click", function () {
   }
 });
 
-document.getElementById("again").addEventListener("click", function () {
+againBtn.addEventListener("click", function () {
   introDiv.classList.remove("hidden");
   questionDiv.classList.add("hidden");
 });
 
+// Looping through each radio button
 document.querySelectorAll("input[type='radio']").forEach((element) =>
   element.addEventListener("click", function (event) {
     question = questionsArray[0].questions[i];
 
+    // If the id matches with the correct the background will get green
     if (event.target.id === question.correct) {
       document.getElementById(
         `label-${event.target.id}`
@@ -268,12 +272,14 @@ document.querySelectorAll("input[type='radio']").forEach((element) =>
       document.getElementById(`label-${event.target.id}`).style.color = "black";
       correctAnswers++;
     } else {
+      // If not it will get red
       document.getElementById(
         `label-${event.target.id}`
       ).style.backgroundColor = "red";
       document.getElementById(`label-${event.target.id}`).style.color = "black";
     }
 
+    // After each selections the other buttons will be disabled
     radioButtons.forEach((radioButton) => (radioButton.disabled = true));
   })
 );
